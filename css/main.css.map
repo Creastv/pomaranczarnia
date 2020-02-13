@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AGAA,AAAA,IAAI,CAAA;EACA,gBAAgB,EAAE,GAAG;CACxB",
+    "sources": [
+        "main.scss",
+        "sass/_variable.scss",
+        "sass/_mixins.scss",
+        "sass/_global.scss",
+        "sass/_lp.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
