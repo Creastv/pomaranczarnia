@@ -11,7 +11,7 @@
     
     <main class="wraper">
         <div class="row">
-            <div class="sidebar col-lg-3 col-md-4 col-sm-4">
+            <div class="sidebar col-lg-3 col-md-4 col-sm-4 col-xs-12">
                 <div class="swiper-container swiper-wraper">
                     <div class="swiper-wrapper swiper-slide-wraper">
                       <div class="swiper-slide">
@@ -19,7 +19,7 @@
                             <span>OD 8600</span> pln net/m2
                         </h1>
                         <h2>ODLICZ VAT!</h2>
-                        <p class="main-color"><b> MASZ PYTANIE ?</b></p>
+                        <h3 class="main-color"><b> MASZ PYTANIE ?</b></h3>
                         <form action="">
                             <div class="input-group">
                                 <span class="ic person"></span>
@@ -33,8 +33,22 @@
                                 <span class="ic phone"></span>
                                 <input type="text" placeholder="Numer telefonu">
                             </div>
+
+                            <!-- Multiple Checkboxes (inline) -->
+                            <div class="check check-one input-group">
+                                <input type="checkbox" id="147m" class="lokal" /><label for="147m">lokal 147 m2</label>
+                                <input type="checkbox" id="183m" class="lokal" /><label for="183m">lokal 183 m2</label>
+                            </div>
+                            <div class="check input-group">
+                                <label for="zgodaDaneOsobowe"><input  id="zgodaDaneOsobowe" type="checkbox" class="zgoda" /><span>Wyrażam zgodę na przetwarzanie moich danych osobowych <a href="">(więcej)</a></span></label>
+                            </div>
+                            <div class="check input-group">
+                                <label for="zgodaOtrzymywanieTel"> <input  id="zgodaOtrzymywanieTel" type="checkbox" class="zgoda" /><span> Wyrażam zgodę na otrzymywanie drogą telefoniczną informacje
+                                    handlowe w tym marketingowe  <a href="#" >(więcej)</a></span></label>
+                            </div>
+
                             <div class="input-group">
-                                <button class="btn-send">WYŚLIJ</button>
+                                <button class="btn-send">WYŚLIJ <span class="ic arrow"></span></button>
                             </div>
                         </form>
                         <h3>Oferta lokali usługowych</h3>
@@ -47,61 +61,81 @@
                 <div class="swiper-scrollbar"></div>
               </div> 
             </div>
-            <div class="article col-lg-9 col-md-8 col-sm-8">
+            <div class="article col-lg-9 col-md-8 col-sm-8 col-xs-12 first-xs last-sm">
+                <div class="top-left-corner">
+                    <img src="img/logo.jpg" alt="">
+                    <a href="#jsModal" id="popup" class="jsModalTrigger">ZOBACZ <br>NA MAPIE</a>
+                </div>
                 <div class="top-right-corner">
                     <a class="facebook" href="https://wp.pl"><img src="img/facebook.png" alt=""></a>
                     <a class="tel" href="tel:">
                         <span> Masz pytania ?</span><br> +48 811 222 000
                     </a>
-                    <img class="see" src="img/video-btn.png" alt="">
-                </div>
-                <div class="top-left-corner">
-                    <img src="img/logo.jpg" alt="">
-                    <span>ZOBACZ <br>NA MAPIE</span>
+                    <a href="#jsModal2" id="popup" class="jsModalTrigger"><img class="see" src="img/video-btn.png" alt=""></a>
                 </div>
                 
                  <!-- Swiper -->
-                <div class="swiper-container gallery-top">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image:url(img/bg.jpg)"></div>
-                        <div class="swiper-slide" style="background-image:url(img/bg2.jpg)"></div>
-                        <div class="swiper-slide" style="background-image:url(img/bg3.jpg)"></div>
-                    </div>
-                </div>
-                <div class="swiper-container gallery-thumbs">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image:url(img/bg.jpg)"></div>
-                        <div class="swiper-slide" style="background-image:url(img/bg2.jpg)"></div>
-                        <div class="swiper-slide" style="background-image:url(img/bg3.jpg)"></div>
-                    </div>
-                </div>
-
-                <div class="bottom-left-corner">
-                    <div class="boxes">
-                        <div class="box">
-                            <img src="img/icon.png" alt="">
-                            <p>Lofty wysokie<br> na 4 metry!</p>
-                        </div>
-                        <div class="box">
-                            <img src="img/icon2.png" alt="">
-                            <p>Warszawa Wola 
-                               <br> ul. Wawrzyszewska 11 /Obozowa</p>
-                        </div>
-                        <div class="box">
-                            <img src="img/icon3.png" alt="">
-                            <p>Trzy duże inwestycje <br>
-                                w okolicy z ponad <br>
-                                1000 mieszkańcami</p>
+                <div class="carousel">
+                    <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url(img/bg.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg2.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg3.jpg)"></div>
                         </div>
                     </div>
-                    <span>Pobierz plan lokali usługowych </span>
-                </div>
-            
-                 
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url(img/bg.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg2.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(img/bg3.jpg)"></div>
+                        </div>
+                    </div>
+                </div>           
             </div>
         </div>
-        
     </main>
+        <div class="wraper2">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12"></div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 first-xs last-sm">
+                    <div class="bottom-left-corner">
+                        <div class="boxes">
+                            <div class="box">
+                                <img src="img/icon.png" alt="">
+                                <p>Lofty wysokie<br> na 4 metry!</p>
+                            </div>
+                            <div class="box">
+                                <img src="img/icon2.png" alt="">
+                                <p>Warszawa Wola 
+                                   <br> ul. Wawrzyszewska 11 <br>/Obozowa</p>
+                            </div>
+                            <div class="box">
+                                <img src="img/icon3.png" alt="">
+                                <p>Trzy duże inwestycje <br>
+                                    w okolicy z ponad <br>
+                                    1000 mieszkańcami</p>
+                            </div>
+                        </div>
+                        <a href="#">Pobierz plan lokali usługowych </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div id="jsModal" class="modal">
+        <div class="modal__overlay jsOverlay"></div>
+        <div class="modal__container">
+            <p>Modal window text</p>
+            <button class="modal__close jsModalClose">&#10005;</button>
+        </div>
+    </div>
+
+    <div id="jsModal2" class="modal">
+        <div class="modal__overlay jsOverlay"></div>
+        <div class="modal__container">
+            <iframe id="video" width="100%" height="100%" src="//www.youtube.com/embed/9vvTeEpHui8?rel=0" frameborder="0" allowfullscreen></iframe>
+            <button class="modal__close jsModalClose">&#10005;</button>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/main.js"></script>
