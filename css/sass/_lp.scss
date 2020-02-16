@@ -21,6 +21,7 @@ main.wraper{
         @include shadow;
         @media #{$xs} {
             height: auto;
+            padding-bottom: 30px;
         }
         .swiper-scrollbar{
             @media #{$xs} {
@@ -37,6 +38,9 @@ main.wraper{
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             padding: 0 30px;
+            @media #{$xs} {
+                padding:0px 15px;
+            }
           }
         h1{
             background-color: $main;
@@ -112,6 +116,7 @@ main.wraper{
                     border:none;
                     text-align: left;
                     margin: 10px 0;
+                    @include shadowBtn;
                     &:focus{
                         outline: none;
                         box-shadow: none;
@@ -199,9 +204,12 @@ main.wraper{
             right: 0px;
             padding: 15px;
             @media #{$sm} {
-                top: 41px;
+                top: 50px;
             }
             @media #{$xs} {
+                top: 115px;
+            }
+            @media #{$xxs} {
                 top: 70px;
             }
             .facebook{
@@ -226,6 +234,7 @@ main.wraper{
                     }
                     @media #{$sm} {
                         text-align: right;
+                        color: #f64700;
                     }
             }
             .see{
@@ -264,6 +273,10 @@ main.wraper{
                 background-repeat: no-repeat;
                 background-position: center right;
                 @media #{$xs} {
+                    font-size: 21px;
+                    padding: 0px 15px;
+                 }
+                @media #{$xxs} {
                    font-size: 12px;
                    padding: 0px 15px;
                 }
@@ -365,6 +378,9 @@ main.wraper{
             @media #{$md} {
                 padding: 5px;
             }
+            @media #{$xs} {
+                padding: 25px 5px;
+            }
             
             .box{
                 padding: 15px;
@@ -446,6 +462,10 @@ main.wraper{
       font-size: 24px;
       color: #747474;
       font-weight: bold;
+      @media #{$xs} {
+        top: -30px;
+        right: -8px;
+      }
       
       &:hover{
         color: #000;
@@ -463,6 +483,9 @@ main.wraper{
       padding: 30px;
       background-color: #fff;
       text-align: center;
+      @media #{$xs} {
+          padding: 10px;
+      }
     }
   }
 

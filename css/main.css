@@ -1648,6 +1648,7 @@ main.wraper .sidebar {
 @media only screen and (max-width: 768px) {
   main.wraper .sidebar {
     height: auto;
+    padding-bottom: 30px;
   }
 }
 
@@ -1668,6 +1669,12 @@ main.wraper .sidebar .swiper-slide-wraper {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  main.wraper .sidebar .swiper-slide-wraper {
+    padding: 0px 15px;
+  }
 }
 
 main.wraper .sidebar h1 {
@@ -1753,6 +1760,8 @@ main.wraper .sidebar form .input-group .btn-send {
   border: none;
   text-align: left;
   margin: 10px 0;
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4);
 }
 
 main.wraper .sidebar form .input-group .btn-send:focus {
@@ -1847,11 +1856,17 @@ main.wraper .article .top-right-corner {
 
 @media only screen and (max-width: 992px) {
   main.wraper .article .top-right-corner {
-    top: 41px;
+    top: 50px;
   }
 }
 
 @media only screen and (max-width: 768px) {
+  main.wraper .article .top-right-corner {
+    top: 115px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
   main.wraper .article .top-right-corner {
     top: 70px;
   }
@@ -1887,6 +1902,7 @@ main.wraper .article .top-right-corner .tel span {
 @media only screen and (max-width: 992px) {
   main.wraper .article .top-right-corner .tel {
     text-align: right;
+    color: #f64700;
   }
 }
 
@@ -1945,6 +1961,13 @@ main.wraper .article .top-left-corner a {
 }
 
 @media only screen and (max-width: 768px) {
+  main.wraper .article .top-left-corner a {
+    font-size: 21px;
+    padding: 0px 15px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
   main.wraper .article .top-left-corner a {
     font-size: 12px;
     padding: 0px 15px;
@@ -2078,6 +2101,12 @@ main.wraper .article .gallery-thumbs .swiper-slide-thumb-active {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .wraper2 .bottom-left-corner .boxes {
+    padding: 25px 5px;
+  }
+}
+
 .wraper2 .bottom-left-corner .boxes .box {
   padding: 15px;
   text-align: center;
@@ -2169,6 +2198,13 @@ main.wraper .article .gallery-thumbs .swiper-slide-thumb-active {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 768px) {
+  .modal__close {
+    top: -30px;
+    right: -8px;
+  }
+}
+
 .modal__close:hover {
   color: #000;
 }
@@ -2185,5 +2221,11 @@ main.wraper .article .gallery-thumbs .swiper-slide-thumb-active {
   padding: 30px;
   background-color: #fff;
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal__container {
+    padding: 10px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

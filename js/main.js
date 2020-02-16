@@ -74,7 +74,13 @@
       },
     });
 
-// Sidebar scrollbar
+// Media Query
+    // zgoda1 tooltip
+    var zgodaWiecej = document.getElementById('zgodaWiecej');
+    var zgodaWiecejDisplay = document.getElementById('zgodaWiecejDisplay');
+    // zgoda2 tooltip
+    var zgodaWiecej2 = document.getElementById('zgodaWiecej2');
+    var zgodaWiecejDisplay2 = document.getElementById('zgodaWiecejDisplay2');
     function myFunction(x) {
       if (!x.matches) { // If media query matches
         var swiper = new Swiper('.swiper-wraper', {
@@ -90,6 +96,33 @@
         window.onload = function() {
           document.querySelector("input").focus();
         }; 
+        zgodaWiecej.addEventListener('mouseover', function(){
+          zgodaWiecejDisplay.style.display = 'block';
+        });
+        zgodaWiecej.addEventListener('mouseout', function(){
+          zgodaWiecejDisplay.style.display = 'none';
+        });
+        
+        zgodaWiecej2.addEventListener('mouseover', function(){
+          zgodaWiecejDisplay2.style.display = 'block';
+        });
+        zgodaWiecej2.addEventListener('mouseout', function(){
+          zgodaWiecejDisplay2.style.display = 'none';
+        });
+      } else {
+        zgodaWiecej.addEventListener('touchstart', function(){
+          zgodaWiecejDisplay.style.display = 'block';
+        });
+        zgodaWiecej.addEventListener('mouseout', function(){
+          zgodaWiecejDisplay.style.display = 'none';
+        });
+        
+        zgodaWiecej2.addEventListener('touchstart', function(){
+          zgodaWiecejDisplay2.style.display = 'block';
+        });
+        zgodaWiecej2.addEventListener('mouseout', function(){
+          zgodaWiecejDisplay2.style.display = 'none';
+        });
       }
     }
 
@@ -102,24 +135,10 @@
 
 
 
-// zgoda1 tooltip
-var zgodaWiecej = document.getElementById('zgodaWiecej');
-var zgodaWiecejDisplay = document.getElementById('zgodaWiecejDisplay');
-zgodaWiecej.addEventListener('mouseover', function(){
-  zgodaWiecejDisplay.style.display = 'block';
-});
-zgodaWiecej.addEventListener('mouseout', function(){
-  zgodaWiecejDisplay.style.display = 'none';
-});
-// zgoda2 tooltip
-var zgodaWiecej2 = document.getElementById('zgodaWiecej2');
-var zgodaWiecejDisplay2 = document.getElementById('zgodaWiecejDisplay2');
-zgodaWiecej2.addEventListener('mouseover', function(){
-  zgodaWiecejDisplay2.style.display = 'block';
-});
-zgodaWiecej2.addEventListener('mouseout', function(){
-  zgodaWiecejDisplay2.style.display = 'none';
-});
+
+
+
+
 
 // Form Validation
 function printError(elemId, hintMsg) {
