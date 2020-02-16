@@ -194,7 +194,7 @@ function validateForm() {
       printError("phoneErr", "Wprowadź swój nr telefonu.");
       phone.style.border = "1px solid red";
   } else {
-      var regex = /^[1-9]\d{9}$/;
+      var regex = /^[1-9]\d{8}$/;
       if(regex.test(phone.value) === false) {
           printError("phoneErr", "Wprowadź poprawny nr telefonu.");
       } else{
