@@ -2009,6 +2009,7 @@ main.wraper .container .top-left-corner a {
 main.wraper .container .carousel {
   position: relative;
   display: contents;
+  height: 100%;
 }
 
 @media only screen and (max-width: 768px) {

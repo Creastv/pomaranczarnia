@@ -288,6 +288,7 @@ main.wraper{
         .carousel{
             position: relative;
             display: contents;
+            height: 100%;
             @media #{$xs} {
                 display: block;
             }
