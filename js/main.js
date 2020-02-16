@@ -1,48 +1,6 @@
 
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
-      spaceBetween: 10,
-      slidesPerView: 3,
-      // loop: true,
-      // freeMode: true,
-      // loopedSlides: 3, //looped slides should be the same
-      // watchSlidesVisibility: true,
-      // watchSlidesProgress: true,
-    });
-    var galleryTop = new Swiper('.gallery-top', {
-      spaceBetween: 0,
-      effect: 'fade',
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      // loop:true,
-      // loopedSlides: 5, //looped slides should be the same
-      thumbs: {
-        swiper: galleryThumbs,
-      },
-    });
-
-    var swiper = new Swiper('.swiper-wraper', {
-      direction: 'vertical',
-      slidesPerView: 'auto',
-      freeMode: true,
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-      mousewheel: true,
-    });
-
-
-  $('.check-one input[type="checkbox"]').on('change', function() {
-      $(this).siblings('input[type="checkbox"]').not(this).prop('checked', false);
-  });
-
-  window.onload = function() {
-    document.querySelector("input").focus();
-  }; 
-
-
-  /* This script supports IE9+ */
+   // Modals
+/* This script supports IE9+ */
 (function() {
   /* Opening modal window function */
   function openModal() {
@@ -99,3 +57,202 @@
   ready(closeModal);
 }());
 
+// Main Slider
+   var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 3,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 0,
+      effect: 'fade',
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
+
+// Sidebar scrollbar
+    function myFunction(x) {
+      if (!x.matches) { // If media query matches
+        var swiper = new Swiper('.swiper-wraper', {
+          direction: 'vertical',
+          slidesPerView: 'auto',
+          freeMode: true,
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
+          mousewheel: true,
+        });
+    
+        window.onload = function() {
+          document.querySelector("input").focus();
+        }; 
+      }
+    }
+
+    var x = window.matchMedia("(max-width: 700px)")
+    myFunction(x) 
+    x.addListener(myFunction) 
+
+
+    
+
+
+
+// zgoda1 tooltip
+var zgodaWiecej = document.getElementById('zgodaWiecej');
+var zgodaWiecejDisplay = document.getElementById('zgodaWiecejDisplay');
+zgodaWiecej.addEventListener('mouseover', function(){
+  zgodaWiecejDisplay.style.display = 'block';
+});
+zgodaWiecej.addEventListener('mouseout', function(){
+  zgodaWiecejDisplay.style.display = 'none';
+});
+// zgoda2 tooltip
+var zgodaWiecej2 = document.getElementById('zgodaWiecej2');
+var zgodaWiecejDisplay2 = document.getElementById('zgodaWiecejDisplay2');
+zgodaWiecej2.addEventListener('mouseover', function(){
+  zgodaWiecejDisplay2.style.display = 'block';
+});
+zgodaWiecej2.addEventListener('mouseout', function(){
+  zgodaWiecejDisplay2.style.display = 'none';
+});
+
+// Form Validation
+function printError(elemId, hintMsg) {
+  document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+function validateForm() {
+  // Retrieving the values of form elements 
+  var name = document.contactForm.fName.value;
+  var email = document.contactForm.fEmail.value;
+  var phone = document.contactForm.fPhone.value;
+  var zgoda = document.contactForm.zgodaDane;
+  var zgoda2 = document.contactForm.zgodaTel;
+
+    var oferta = [];
+    var checkboxes = document.getElementsByName("oferta[]");
+    var nameErr = emailErr = phoneErr = zgodaDaneErr = zgodaTelErr = ofertaErr = true;
+    for(var i=0; i < checkboxes.length; i++) {
+        if(!checkboxes[i].checked ) {
+            // Populate oferta array with selected values
+           if (!checkboxes[0].checked ) {
+            printError("ofertaErr", "Zaznacz chociaż jedną opcję");
+           } 
+        } else {
+          oferta.push(checkboxes[i].value);
+          printError("ofertaErr", "");
+          ofertaErr = false;
+          console.log(oferta)
+        }
+    }
+  
+
+// Defining error variables with a default value
+  // Validate imie i nazwisko
+  if(name == "") {
+      printError("nameErr", "Proszę o podanie swojego imienia i nazwiska.");
+  } else {
+      var regex = /^[a-zA-Z\s]+$/;                
+      if(regex.test(name) === false) {
+          printError("nameErr", "Wprowadź poprawne imienia i nazwiska.");
+      } else {
+          printError("nameErr", "");
+          nameErr = false;
+      }
+  }
+  // Validate email address
+  if(email == "") {
+      printError("emailErr", "Proszę o podanie adresu email.");
+  } else {
+      // Regular expression for basic email validation
+      var regex = /^\S+@\S+\.\S+$/;
+      if(regex.test(email) === false) {
+          printError("emailErr", "Wprowdź poprawny adres email");
+      } else{
+          printError("emailErr", "");
+          emailErr = false;
+      }
+  }
+  // Validate phone number
+  if(phone == "") {
+      printError("phoneErr", "Please enter your phone number");
+  } else {
+      var regex = /^[1-9]\d{9}$/;
+      if(regex.test(phone) === false) {
+          printError("phoneErr", "Please enter a valid 10 digit phone number");
+      } else{
+          printError("phoneErr", "");
+          phoneErr = false;
+      }
+  }
+  // Validate zgoda o przetwarzanie danych osobowych
+  if(!zgoda.checked) {
+    printError("zgodaDaneErr", "Please select your zgodaDane");
+    zgodaDaneErr = true;
+  } else {
+    printError("zgodaDaneErr", "");
+    zgodaDaneErr = false;
+  }
+   // Validate zgoda o otrzymywanie droga tel informacji handlowych 
+  if(!zgoda2.checked) {
+    printError("zgodaTelErr", "Please select your zgodaDane");
+    zgodaTelErr = true;
+  } else {
+    printError("zgodaTelErr", "");
+    zgodaTelErr = false;
+  }
+  // Prevent the form from being submitted if there are any errors
+  if(( nameErr || emailErr || phoneErr || zgodaDaneErr || zgodaTelErr || ofertaErr ) == true) {
+     return false;
+  } else {
+    var dataPreview = "Dane: \n" +
+    "Imię i nazwisko: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Telefon: " + phone + "\n" +
+    "Zgoda: " + zgoda.value + "\n" +
+    "Zgoda2: " + zgoda2.value + "\n";
+    if(oferta.length) {
+    dataPreview += "Oferta: " + oferta.join(", ");
+    } alert(dataPreview);
+  }
+};
+
+
+
+// Google map
+function initMap() {
+  var uluru = {lat: 52.2466629, lng: 20.9602282};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: uluru,
+    styles: [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#fcfcfc"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#fcfcfc"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]}]
+  });
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<img src="img/logo.jpg">'+
+      '<div id="bodyContent">'+
+      '<h3>Wawrzyszewska 11, 01-162 Warszawa </h3>'+
+      '<a class="cta" href="https://www.google.pl/maps/place/Biuro+Sprzedaży+Mieszkań+Pomarańczarnia+Deweloper+Gemma/@52.2466629,20.9602282,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x0:0x3ec9a3a70588c25a!2sBiuro+Sprzedaży+Mieszkań+Pomarańczarnia+Deweloper+Gemma!8m2!3d52.2466596!4d20.9624169!3m4!1s0x471ecb7620cefbe7:0x3ec9a3a70588c25a!8m2!3d52.2466596!4d20.9624169" target="_blank">JAK DOJECHAĆ</a>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}

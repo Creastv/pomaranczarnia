@@ -20,35 +20,54 @@
                         </h1>
                         <h2>ODLICZ VAT!</h2>
                         <h3 class="main-color"><b> MASZ PYTANIE ?</b></h3>
-                        <form action="">
+                        <form name="contactForm" action="" method="post" onsubmit="return validateForm()">
                             <div class="input-group">
                                 <span class="ic person"></span>
-                                <input type="text" placeholder="Imię i nazwisko">
+                                <input type="text" name="fName" placeholder="Imię i nazwisko">
+                                <div class="error" id="nameErr"></div>
                             </div>
                             <div class="input-group">
                                 <span class="ic email"></span>
-                                <input id="" name="" type="text" placeholder="Adres email">
+                                <input id="email" name="fEmail" type="text" placeholder="Adres email">
+                                <div class="error" id="emailErr"></div>
                             </div>
                             <div class="input-group">
                                 <span class="ic phone"></span>
-                                <input type="text" placeholder="Numer telefonu">
+                                <input id="phone" type="text" name="fPhone" placeholder="Numer telefonu">
+                                <div class="error" id="phoneErr"></div>
                             </div>
 
                             <!-- Multiple Checkboxes (inline) -->
                             <div class="check check-one input-group">
-                                <input type="checkbox" id="147m" class="lokal" /><label for="147m">lokal 147 m2</label>
-                                <input type="checkbox" id="183m" class="lokal" /><label for="183m">lokal 183 m2</label>
+                                <input name="oferta[]" type="checkbox" id="147m" class="lokal" value="Lokal 147m"/><label for="147m">lokal 147 m2</label>
+                                <input  name="oferta[]" type="checkbox" id="183m" class="lokal" value="Lokal 183m"/><label for="183m">lokal 183 m2</label>
+                                <div class="error" id="ofertaErr"></div>
                             </div>
                             <div class="check input-group">
-                                <label for="zgodaDaneOsobowe"><input  id="zgodaDaneOsobowe" type="checkbox" class="zgoda" /><span>Wyrażam zgodę na przetwarzanie moich danych osobowych <a href="">(więcej)</a></span></label>
+                                <label for="zgodaDane">
+                                    <input name="zgodaDane" id="zgodaDane" type="checkbox" class="zgoda" value="Zaakceptowana zgoda o przetwarzanie Danych osobowych" />
+                                    <span id="zgodaWiecej">
+                                        Wyrażam zgodę na przetwarzanie moich danych osobowych <a href="">(więcej)</a>
+                                    </span>
+                                  <div class="error" id="zgodaDaneErr"></div>
+                                </label>
+                                <span id="zgodaWiecejDisplay" class="tooltip">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur alias tenetur voluptates repudiandae? Illo eum nobis praesentium, consequuntur quasi ipsum aperiam dignissimos alias. Nostrum corporis, ab rem enim molestiae ratione!</span>
                             </div>
                             <div class="check input-group">
-                                <label for="zgodaOtrzymywanieTel"> <input  id="zgodaOtrzymywanieTel" type="checkbox" class="zgoda" /><span> Wyrażam zgodę na otrzymywanie drogą telefoniczną informacje
-                                    handlowe w tym marketingowe  <a href="#" >(więcej)</a></span></label>
+                                <label for="zgodaTel"> 
+                                    <input name="zgodaTel" id="zgodaTel" type="checkbox" class="zgoda"  value="Potwierdzona zgoda o otrzymywanie informacji marketingowych drogą telefoniczną" />
+                                    <span id="zgodaWiecej2"> 
+                                        Wyrażam zgodę na otrzymywanie drogą telefoniczną informacje
+                                        handlowe w tym marketingowe  <a href="#" >(więcej)</a>
+                                    </span>
+                                    <div class="error" id="zgodaTelErr"></div>
+                                </label>
+                                <span id="zgodaWiecejDisplay2" class="tooltip">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur alias tenetur voluptates repudiandae? Illo eum nobis praesentium, consequuntur quasi ipsum aperiam dignissimos alias. Nostrum corporis, ab rem enim molestiae ratione!</span>
                             </div>
 
                             <div class="input-group">
-                                <button class="btn-send">WYŚLIJ <span class="ic arrow"></span></button>
+                                
+                                <button type="submit" id="submit" class="btn-send">WYŚLIJ <span class="ic arrow"></span></button>
                             </div>
                         </form>
                         <h3>Oferta lokali usługowych</h3>
@@ -121,23 +140,28 @@
                 </div>
             </div>
         </div>
+
+    <!-- google map    -->
     <div id="jsModal" class="modal">
         <div class="modal__overlay jsOverlay"></div>
         <div class="modal__container">
-            <p>Modal window text</p>
+            <div id="map"></div>
+            <button class="modal__close jsModalClose">&#10005;</button>
+        </div>
+    </div>
+    <!-- Video -->
+    <div id="jsModal2" class="modal">
+        <div class="modal__overlay jsOverlay"></div>
+        <div class="modal__container">
+            <!-- <iframe id="video" width="100%" height="100%" src="//www.youtube.com/embed/9vvTeEpHui8?rel=0" frameborder="0" allowfullscreen></iframe> -->
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/O1OYWiSbgi0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <button class="modal__close jsModalClose">&#10005;</button>
         </div>
     </div>
 
-    <div id="jsModal2" class="modal">
-        <div class="modal__overlay jsOverlay"></div>
-        <div class="modal__container">
-            <iframe id="video" width="100%" height="100%" src="//www.youtube.com/embed/9vvTeEpHui8?rel=0" frameborder="0" allowfullscreen></iframe>
-            <button class="modal__close jsModalClose">&#10005;</button>
-        </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="js/swiper.min.js"></script>
     <script src="js/main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIXFTZ5TWh5sJutqQeoiXH3aNRScmIxBw&callback=initMap"></script>
 </body>
 </html>

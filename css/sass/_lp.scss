@@ -92,7 +92,7 @@ main.wraper{
                     padding: 0 10px 0 32px;
                     width: 100%;
                     height: 45px;
-                    margin-bottom: 10px;
+                    margin-bottom: 18px;
                     &:focus{
                         border: 1px solid #f64700 !important;
                         box-shadow: 0px 0px 4px 4px rgba(0,0,0, .1);
@@ -133,6 +133,7 @@ main.wraper{
             
             .check{
                 margin-bottom: 10px;
+                flex-wrap:wrap;
                 input{
                     width: 20px;
                     min-width: 20px;
@@ -149,6 +150,29 @@ main.wraper{
                 span{
                     margin-left:10px;
                 }
+                .error{
+                    bottom:-11px;
+                }
+                
+                #zgodaWiecej, #zgodaWiecej2{
+                    a{
+                        color:$main;
+                    }
+
+                }
+                .tooltip{
+                    background: rgba($main, .8);
+                    width: 85%;
+                    right: 0;
+                    bottom: 29px;
+                    position: absolute;
+                    z-index: 2;
+                    padding: 10px;
+                    font-size: 12px;
+                    color:#fff;
+                    display: none;
+                }
+
             }
             .check-one{
                 margin: 10px 0 20px;
@@ -414,8 +438,8 @@ main.wraper{
     
     &__close{
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 5px;
+      right: 5px;
       border: none;
       outline: none;
       background: none;
@@ -441,3 +465,4 @@ main.wraper{
       text-align: center;
     }
   }
+
