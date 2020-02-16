@@ -224,9 +224,9 @@ function validateForm() {
      return false;
   } else {
     var dataPreview = "Dane: \n" +
-    "Imię i nazwisko: " + name + "\n" +
-    "Email: " + email + "\n" +
-    "Telefon: " + phone + "\n" +
+    "Imię i nazwisko: " + name.value + "\n" +
+    "Email: " + email.value + "\n" +
+    "Telefon: " + phone.value + "\n" +
     "Zgoda: " + zgoda.value + "\n" +
     "Zgoda2: " + zgoda2.value + "\n";
     if(oferta.length) {
