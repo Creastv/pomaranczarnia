@@ -130,16 +130,6 @@
     myFunction(x) 
     x.addListener(myFunction) 
 
-
-    
-
-
-
-
-
-
-
-
 // Form Validation
 function printError(elemId, hintMsg) {
   document.getElementById(elemId).innerHTML = hintMsg;
@@ -147,9 +137,9 @@ function printError(elemId, hintMsg) {
 
 function validateForm() {
   // Retrieving the values of form elements 
-  var name = document.contactForm.fName.value;
-  var email = document.contactForm.fEmail.value;
-  var phone = document.contactForm.fPhone.value;
+  var name = document.contactForm.fName;
+  var email = document.contactForm.fEmail;
+  var phone = document.contactForm.fPhone;
   var zgoda = document.contactForm.zgodaDane;
   var zgoda2 = document.contactForm.zgodaTel;
 
@@ -173,24 +163,26 @@ function validateForm() {
 
 // Defining error variables with a default value
   // Validate imie i nazwisko
-  if(name == "") {
-      printError("nameErr", "Proszę o podanie swojego imienia i nazwiska.");
+  if(name.value == "") {
+      printError("nameErr", "Wprowadź swóje imię i nazwisko.");
+      name.style.border = "1px solid red";
   } else {
       var regex = /^[a-zA-Z\s]+$/;                
-      if(regex.test(name) === false) {
-          printError("nameErr", "Wprowadź poprawne imienia i nazwiska.");
+      if(regex.test(name.value) === false) {
+          printError("nameErr", "Wprowadź poprawne imienie i nazwisko.");
       } else {
           printError("nameErr", "");
           nameErr = false;
       }
   }
   // Validate email address
-  if(email == "") {
-      printError("emailErr", "Proszę o podanie adresu email.");
+  if(email.value == "") {
+      printError("emailErr", "Wprowadź swój adres email.");
+      email.style.border = "1px solid red";
   } else {
       // Regular expression for basic email validation
       var regex = /^\S+@\S+\.\S+$/;
-      if(regex.test(email) === false) {
+      if(regex.test(email.value) === false) {
           printError("emailErr", "Wprowdź poprawny adres email");
       } else{
           printError("emailErr", "");
@@ -198,12 +190,13 @@ function validateForm() {
       }
   }
   // Validate phone number
-  if(phone == "") {
-      printError("phoneErr", "Please enter your phone number");
+  if(phone.value == "") {
+      printError("phoneErr", "Wprowadź swój nr telefonu.");
+      phone.style.border = "1px solid red";
   } else {
       var regex = /^[1-9]\d{9}$/;
-      if(regex.test(phone) === false) {
-          printError("phoneErr", "Please enter a valid 10 digit phone number");
+      if(regex.test(phone.value) === false) {
+          printError("phoneErr", "Wprowadź poprawny nr telefonu.");
       } else{
           printError("phoneErr", "");
           phoneErr = false;
@@ -211,7 +204,8 @@ function validateForm() {
   }
   // Validate zgoda o przetwarzanie danych osobowych
   if(!zgoda.checked) {
-    printError("zgodaDaneErr", "Please select your zgodaDane");
+    printError("zgodaDaneErr", "Pole wymagane.");
+    zgoda.style.border = "1px solid red";
     zgodaDaneErr = true;
   } else {
     printError("zgodaDaneErr", "");
@@ -219,7 +213,7 @@ function validateForm() {
   }
    // Validate zgoda o otrzymywanie droga tel informacji handlowych 
   if(!zgoda2.checked) {
-    printError("zgodaTelErr", "Please select your zgodaDane");
+    printError("zgodaTelErr", "Pole wymagane.");
     zgodaTelErr = true;
   } else {
     printError("zgodaTelErr", "");

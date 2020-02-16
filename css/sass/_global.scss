@@ -42,3 +42,28 @@ p{
     text-decoration: none;
     text-transform: uppercase;
 }
+#thx{
+    .thx{
+        position: absolute;
+        z-index: 2;
+        background: #f24800;
+        width: 50%;
+        top: 30%;
+        padding: 20px;
+        color: #fff;
+        @media #{$xxs} {
+            width: 70%;
+        }
+        h1{
+            @media #{$xxs} {
+                font-size: 21px;
+            }
+        }
+    }
+    .see{
+        @media #{$xxs} {
+            display: none;
+        }
+    }
+    
+}

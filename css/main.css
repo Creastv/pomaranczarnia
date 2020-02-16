@@ -1617,6 +1617,34 @@ p {
   text-transform: uppercase;
 }
 
+#thx .thx {
+  position: absolute;
+  z-index: 2;
+  background: #f24800;
+  width: 50%;
+  top: 30%;
+  padding: 20px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 568px) {
+  #thx .thx {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  #thx .thx h1 {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  #thx .see {
+    display: none;
+  }
+}
+
 main.wraper {
   display: block;
   width: 100%;
@@ -1743,7 +1771,7 @@ main.wraper .sidebar form .input-group input {
 }
 
 main.wraper .sidebar form .input-group input:focus {
-  border: 1px solid #f64700 !important;
+  border: 1px solid green !important;
   -webkit-box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.1);
   outline: none;
@@ -1840,12 +1868,12 @@ main.wraper .sidebar form .check-one label {
   color: #f64700;
 }
 
-main.wraper .article {
+main.wraper .container {
   margin: 0;
   padding: 0;
 }
 
-main.wraper .article .top-right-corner {
+main.wraper .container .top-right-corner {
   position: absolute;
   text-align: right;
   z-index: 3;
@@ -1855,24 +1883,24 @@ main.wraper .article .top-right-corner {
 }
 
 @media only screen and (max-width: 992px) {
-  main.wraper .article .top-right-corner {
+  main.wraper .container .top-right-corner {
     top: 50px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  main.wraper .article .top-right-corner {
+  main.wraper .container .top-right-corner {
     top: 115px;
   }
 }
 
 @media only screen and (max-width: 568px) {
-  main.wraper .article .top-right-corner {
+  main.wraper .container .top-right-corner {
     top: 70px;
   }
 }
 
-main.wraper .article .top-right-corner .facebook {
+main.wraper .container .top-right-corner .facebook {
   display: block;
   text-align: left;
   text-decoration: none;
@@ -1881,12 +1909,12 @@ main.wraper .article .top-right-corner .facebook {
 }
 
 @media only screen and (max-width: 992px) {
-  main.wraper .article .top-right-corner .facebook {
+  main.wraper .container .top-right-corner .facebook {
     text-align: right;
   }
 }
 
-main.wraper .article .top-right-corner .tel {
+main.wraper .container .top-right-corner .tel {
   display: block;
   text-align: left;
   font-size: 32px;
@@ -1895,23 +1923,23 @@ main.wraper .article .top-right-corner .tel {
   color: #000;
 }
 
-main.wraper .article .top-right-corner .tel span {
+main.wraper .container .top-right-corner .tel span {
   font-size: 18px !important;
 }
 
 @media only screen and (max-width: 992px) {
-  main.wraper .article .top-right-corner .tel {
+  main.wraper .container .top-right-corner .tel {
     text-align: right;
     color: #f64700;
   }
 }
 
-main.wraper .article .top-right-corner .see {
+main.wraper .container .top-right-corner .see {
   width: 128px;
   margin-top: 50px;
 }
 
-main.wraper .article .top-left-corner {
+main.wraper .container .top-left-corner {
   position: absolute;
   top: 10%;
   z-index: 3;
@@ -1928,7 +1956,7 @@ main.wraper .article .top-left-corner {
 }
 
 @media only screen and (max-width: 768px) {
-  main.wraper .article .top-left-corner {
+  main.wraper .container .top-left-corner {
     position: inherit;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
@@ -1937,18 +1965,18 @@ main.wraper .article .top-left-corner {
 }
 
 @media only screen and (max-width: 1200px) {
-  main.wraper .article .top-left-corner img {
+  main.wraper .container .top-left-corner img {
     width: 250px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  main.wraper .article .top-left-corner img {
+  main.wraper .container .top-left-corner img {
     width: 64%;
   }
 }
 
-main.wraper .article .top-left-corner a {
+main.wraper .container .top-left-corner a {
   text-decoration: none;
   color: #fff;
   font-size: 16px;
@@ -1961,53 +1989,53 @@ main.wraper .article .top-left-corner a {
 }
 
 @media only screen and (max-width: 768px) {
-  main.wraper .article .top-left-corner a {
+  main.wraper .container .top-left-corner a {
     font-size: 21px;
     padding: 0px 15px;
   }
 }
 
 @media only screen and (max-width: 568px) {
-  main.wraper .article .top-left-corner a {
+  main.wraper .container .top-left-corner a {
     font-size: 12px;
     padding: 0px 15px;
   }
 }
 
-main.wraper .article .carousel {
+main.wraper .container .carousel {
   position: relative;
   display: contents;
 }
 
 @media only screen and (max-width: 768px) {
-  main.wraper .article .carousel {
+  main.wraper .container .carousel {
     display: block;
   }
 }
 
-main.wraper .article .swiper-container {
+main.wraper .container .swiper-container {
   height: 100px;
   margin-left: auto;
   margin-right: auto;
 }
 
-main.wraper .article .swiper-slide {
+main.wraper .container .swiper-slide {
   background-size: cover;
   background-position: center;
 }
 
-main.wraper .article .gallery-top {
+main.wraper .container .gallery-top {
   height: 100%;
   width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
-  main.wraper .article .gallery-top {
+  main.wraper .container .gallery-top {
     height: 500px;
   }
 }
 
-main.wraper .article .gallery-thumbs {
+main.wraper .container .gallery-thumbs {
   position: fixed;
   z-index: 3;
   bottom: 0px;
@@ -2018,13 +2046,13 @@ main.wraper .article .gallery-thumbs {
 }
 
 @media only screen and (max-width: 768px) {
-  main.wraper .article .gallery-thumbs {
+  main.wraper .container .gallery-thumbs {
     position: absolute;
     bottom: 10px;
   }
 }
 
-main.wraper .article .gallery-thumbs .swiper-slide {
+main.wraper .container .gallery-thumbs .swiper-slide {
   height: 100%;
   width: 100px !important;
   opacity: 1;
@@ -2034,12 +2062,12 @@ main.wraper .article .gallery-thumbs .swiper-slide {
 }
 
 @media only screen and (max-width: 768px) {
-  main.wraper .article .gallery-thumbs .swiper-slide {
+  main.wraper .container .gallery-thumbs .swiper-slide {
     width: 100px !important;
   }
 }
 
-main.wraper .article .gallery-thumbs .swiper-slide-thumb-active {
+main.wraper .container .gallery-thumbs .swiper-slide-thumb-active {
   opacity: 1;
   border: 3px solid #f64700;
 }
