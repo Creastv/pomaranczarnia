@@ -1837,6 +1837,10 @@ main.wraper .sidebar form .check span {
   margin-left: 10px;
 }
 
+main.wraper .sidebar form .check span span {
+  color: #f64700;
+}
+
 main.wraper .sidebar form .check .error {
   bottom: -11px;
 }
