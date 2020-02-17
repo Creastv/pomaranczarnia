@@ -249,7 +249,7 @@ function initMap() {
   var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<img src="img/logo.jpg">'+
+      '<img style="width:100%;" src="img/logo.jpg">'+
       '<div id="bodyContent">'+
       '<h3>Wawrzyszewska 11, 01-162 Warszawa </h3>'+
       '<a class="cta" href="https://www.google.pl/maps/place/Biuro+Sprzedaży+Mieszkań+Pomarańczarnia+Deweloper+Gemma/@52.2466629,20.9602282,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x0:0x3ec9a3a70588c25a!2sBiuro+Sprzedaży+Mieszkań+Pomarańczarnia+Deweloper+Gemma!8m2!3d52.2466596!4d20.9624169!3m4!1s0x471ecb7620cefbe7:0x3ec9a3a70588c25a!8m2!3d52.2466596!4d20.9624169" target="_blank">JAK DOJECHAĆ</a>'+
