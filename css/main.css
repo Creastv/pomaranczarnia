@@ -1588,7 +1588,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .main-color {
@@ -1744,7 +1744,7 @@ main.wraper .sidebar form .input-group .ic {
   width: 30px;
   position: absolute;
   left: 0;
-  height: 45px;
+  height: 35px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1766,7 +1766,7 @@ main.wraper .sidebar form .input-group input {
   border-bottom: 1px solid #000;
   padding: 0 10px 0 32px;
   width: 100%;
-  height: 45px;
+  height: 35px;
   margin-bottom: 18px;
 }
 
@@ -1843,6 +1843,10 @@ main.wraper .sidebar form .check span span {
 
 main.wraper .sidebar form .check .error {
   bottom: -11px;
+}
+
+main.wraper .sidebar form .check #zgodaWiecej, main.wraper .sidebar form .check #zgodaWiecej2 {
+  font-size: 10px;
 }
 
 main.wraper .sidebar form .check #zgodaWiecej a, main.wraper .sidebar form .check #zgodaWiecej2 a {

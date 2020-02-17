@@ -96,33 +96,33 @@
         window.onload = function() {
           document.querySelector("input").focus();
         }; 
-        zgodaWiecej.addEventListener('mouseover', function(){
-          zgodaWiecejDisplay.style.display = 'block';
-        });
-        zgodaWiecej.addEventListener('mouseout', function(){
-          zgodaWiecejDisplay.style.display = 'none';
-        });
+        // zgodaWiecej.addEventListener('mouseover', function(){
+        //   zgodaWiecejDisplay.style.display = 'block';
+        // });
+        // zgodaWiecej.addEventListener('mouseout', function(){
+        //   zgodaWiecejDisplay.style.display = 'none';
+        // });
         
-        zgodaWiecej2.addEventListener('mouseover', function(){
-          zgodaWiecejDisplay2.style.display = 'block';
-        });
-        zgodaWiecej2.addEventListener('mouseout', function(){
-          zgodaWiecejDisplay2.style.display = 'none';
-        });
+        // zgodaWiecej2.addEventListener('mouseover', function(){
+        //   zgodaWiecejDisplay2.style.display = 'block';
+        // });
+        // zgodaWiecej2.addEventListener('mouseout', function(){
+        //   zgodaWiecejDisplay2.style.display = 'none';
+        // });
       } else {
-        zgodaWiecej.addEventListener('touchstart', function(){
-          zgodaWiecejDisplay.style.display = 'block';
-        });
-        zgodaWiecej.addEventListener('mouseout', function(){
-          zgodaWiecejDisplay.style.display = 'none';
-        });
+        // zgodaWiecej.addEventListener('touchstart', function(){
+        //   zgodaWiecejDisplay.style.display = 'block';
+        // });
+        // zgodaWiecej.addEventListener('mouseout', function(){
+        //   zgodaWiecejDisplay.style.display = 'none';
+        // });
         
-        zgodaWiecej2.addEventListener('touchstart', function(){
-          zgodaWiecejDisplay2.style.display = 'block';
-        });
-        zgodaWiecej2.addEventListener('mouseout', function(){
-          zgodaWiecejDisplay2.style.display = 'none';
-        });
+        // zgodaWiecej2.addEventListener('touchstart', function(){
+        //   zgodaWiecejDisplay2.style.display = 'block';
+        // });
+        // zgodaWiecej2.addEventListener('mouseout', function(){
+        //   zgodaWiecejDisplay2.style.display = 'none';
+        // });
       }
     }
 
